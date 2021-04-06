@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{useState,useEffect} from "react";
+
+import './App.scss'
+
+import FetchQuote from "./quotesFetcher"
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+		<div className="QuoteBox paper container-xs">
+			
+			<FetchQuote/>
+
+			<div className="Buttons">
+				<a href="https://www.linkedin.com/in/saurjaghosh/">
+					<button className="ButtonLeft paper-btn btn-primary btn-small">@saurja</button>
+				</a> 
+				<a href="" refresh="true">
+					<button className="ButtonRight btn-small" refresh="true">New Quote</button>
+				</a> 
+				
+			</div>
+    	</div>
     </div>
   );
 }

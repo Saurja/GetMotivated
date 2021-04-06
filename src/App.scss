@@ -1,0 +1,23 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.Author {
+  text-align: right;
+}
+
+.QuoteBox {
+  margin: 1em;
+  max-width: 40em;
+}
+
+.ButtonLeft {
+  float: left;
+}
+
+.ButtonRight {
+  float: right;
+}
