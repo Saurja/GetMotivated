@@ -1,28 +1,16 @@
-import React,{useState,useEffect} from "react";
+import {Main} from './components/Main';
+import {Route, Switch } from 'react-router-dom';
 
-import './App.scss'
-
-import FetchQuote from "./quotesFetcher"
+import "./App.scss"
 
 function App() {
-  return (
-    <div className="App">
-		<div className="QuoteBox paper container-xs">
-			
-			<FetchQuote/>
-
-			<div className="Buttons">
-				<a href="https://www.linkedin.com/in/saurjaghosh/">
-					<button className="ButtonLeft paper-btn btn-primary btn-small">@saurja</button>
-				</a> 
-				<a href="" refresh="true">
-					<button className="ButtonRight btn-small" refresh="true">New Quote</button>
-				</a> 
-				
-			</div>
-    	</div>
-    </div>
-  );
-}
+	return (
+	  <main>
+		<Switch>
+		  <Route path="/" component={Main} />
+		</Switch>
+	  </main>
+	);
+  }
 
 export default App;

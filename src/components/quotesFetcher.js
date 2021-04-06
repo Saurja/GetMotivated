@@ -2,9 +2,7 @@ import React,{useState,useEffect} from "react"
 
 function FetchQuote() {
     const [quote,setQuote] = useState('');
-    const [loading,setLoading] = useState(true);
     const [author,setAuthor]= useState('');
-    const [imgSrc,setImgSrc]= useState('');
 
     useEffect(()=>{
         getQuote();
@@ -26,7 +24,7 @@ function FetchQuote() {
     }
 return(
     <>
-    <div className="QuoteText"><h3>" {quote}"</h3></div>
+    <div className="QuoteText"><h4>"{quote}"</h4></div>
     <div className="Author"><h5>- {author}</h5></div>
     </>
 )
